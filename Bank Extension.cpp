@@ -32,7 +32,7 @@ enum enTransactionMenuOptions
 
 };
 
-double ReadNum(string Message)   // ÏÇ reusability , åŞÑÃ ãä ÎáÇáåÇ Çá deposit & withdraw
+double ReadNum(string Message)   // Ø¯Ø§ reusability , Ù‡Ù‚Ø±Ø£ Ù…Ù† Ø®Ù„Ø§Ù„Ù‡Ø§ Ø§Ù„ deposit & withdraw
 {
 	int Num;
 
@@ -56,7 +56,7 @@ struct sClient
 
 };
 
-short ReadMainMenuOption()  // íŞÑÃ ÇÎÊíÇÑ ÇáíæÒÑ ãä Çáãíä ãíäæ ÇÓßÑíä
+short ReadMainMenuOption()  // ÙŠÙ‚Ø±Ø£ Ø§Ø®ØªÙŠØ§Ø± Ø§Ù„ÙŠÙˆØ²Ø± Ù…Ù† Ø§Ù„Ù…ÙŠÙ† Ù…ÙŠÙ†Ùˆ Ø§Ø³ÙƒØ±ÙŠÙ†
 {
 		short Number = 0;
 		cout << "Choose what do you want to do? [1 to 7]? ";
@@ -64,7 +64,7 @@ short ReadMainMenuOption()  // íŞÑÃ ÇÎÊíÇÑ ÇáíæÒÑ ãä Çáãíä ãíäæ ÇÓßÑíä
 		return Number;
 }
 
-short ReadTransactionMenuOption() //transaction Menue íŞÑÃ ÇÎÊíÇÑ ÇáíæÒÑ ãä Çá   
+short ReadTransactionMenuOption() //transaction Menue ÙŠÙ‚Ø±Ø£ Ø§Ø®ØªÙŠØ§Ø± Ø§Ù„ÙŠÙˆØ²Ø± Ù…Ù† Ø§Ù„   
 {
 	short Number = 0;
 	cout << "Choose what do you want to do? [1 to 4]? ";
@@ -72,7 +72,7 @@ short ReadTransactionMenuOption() //transaction Menue íŞÑÃ ÇÎÊíÇÑ ÇáíæÒÑ ãä Çá
 	return Number;
 }
 
-void ShowHeaderScreen(string Message) //ÇáåíÏÑ ÈÊÇÚ Çí ÈÑæÓíÓ
+void ShowHeaderScreen(string Message) //Ø§Ù„Ù‡ÙŠØ¯Ø± Ø¨ØªØ§Ø¹ Ø§ÙŠ Ø¨Ø±ÙˆØ³ÙŠØ³
 {
 	cout << "\n\n----------------------------------------------------\n";
 	cout << "                  " << Message << "                      \n";
@@ -80,7 +80,7 @@ void ShowHeaderScreen(string Message) //ÇáåíÏÑ ÈÊÇÚ Çí ÈÑæÓíÓ
 
 }
 
-vector <string > SplitString(string S1, string Delim) //  Ïí ÈÊÇÎÏ ÇáÓØÑ ãä ÇáİÇíá æ ÈÊÍĞİ ÇáİæÇÕá æ ÊÍØ ÇáÈíÇäÇÊ İ İíßÊæÑ , ÇáİÊßæÑ Ïå İ ÈíäÇäÇÊ Úãíá æÇÍÏ 
+vector <string > SplitString(string S1, string Delim) //  Ø¯ÙŠ Ø¨ØªØ§Ø®Ø¯ Ø§Ù„Ø³Ø·Ø± Ù…Ù† Ø§Ù„ÙØ§ÙŠÙ„ Ùˆ Ø¨ØªØ­Ø°Ù Ø§Ù„ÙÙˆØ§ØµÙ„ Ùˆ ØªØ­Ø· Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ù ÙÙŠÙƒØªÙˆØ± , Ø§Ù„ÙØªÙƒÙˆØ± Ø¯Ù‡ Ù Ø¨ÙŠÙ†Ø§Ù†Ø§Øª Ø¹Ù…ÙŠÙ„ ÙˆØ§Ø­Ø¯ 
 {
 	vector <string> vData;
 	int Pos = 0;
@@ -109,7 +109,7 @@ vector <string > SplitString(string S1, string Delim) //  Ïí ÈÊÇÎÏ ÇáÓØÑ ãä ÇáİÇ
 
 }
 
-sClient ConvertLineToRecord(string Line, string Seperator = "#//#") // ÏÇ ÈŞÇ ÈíÇÎÏ ÇááÇíä ÈíÚãáå İíßÊæÑ æãä ÇáİíßÊæÑ íãáí ÈíÇäÇÊ ÇÓÊÑÇßÔÑ áÚãíá æÇÍÏ
+sClient ConvertLineToRecord(string Line, string Seperator = "#//#") // Ø¯Ø§ Ø¨Ù‚Ø§ Ø¨ÙŠØ§Ø®Ø¯ Ø§Ù„Ù„Ø§ÙŠÙ† Ø¨ÙŠØ¹Ù…Ù„Ù‡ ÙÙŠÙƒØªÙˆØ± ÙˆÙ…Ù† Ø§Ù„ÙÙŠÙƒØªÙˆØ± ÙŠÙ…Ù„ÙŠ Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ø³ØªØ±Ø§ÙƒØ´Ø± Ù„Ø¹Ù…ÙŠÙ„ ÙˆØ§Ø­Ø¯
 {
 	sClient Client;
 	vector <string> vClientData;
@@ -127,7 +127,7 @@ sClient ConvertLineToRecord(string Line, string Seperator = "#//#") // ÏÇ ÈŞÇ Èí
 
 }
 
-string ConvertRecordToLine(sClient Client, string Seperator = "#//#") // áæ ÚÇæÒå ÊÖíİ ÇáÈíÇäÇÊ áİÇíá İ ÈÊÇÎÏ ÓÊÑÇßÔÑ æ ÈÊÍæáå á áÇíä 
+string ConvertRecordToLine(sClient Client, string Seperator = "#//#") // Ù„Ùˆ Ø¹Ø§ÙˆØ²Ù‡ ØªØ¶ÙŠÙ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ù„ÙØ§ÙŠÙ„ Ù Ø¨ØªØ§Ø®Ø¯ Ø³ØªØ±Ø§ÙƒØ´Ø± Ùˆ Ø¨ØªØ­ÙˆÙ„Ù‡ Ù„ Ù„Ø§ÙŠÙ† 
 {
 	string Line = "";
 
@@ -142,7 +142,7 @@ string ConvertRecordToLine(sClient Client, string Seperator = "#//#") // áæ ÚÇæÒ
 
 }
 
-vector <sClient> LoadDataFromFile(string FileName) // İíßÊæÑ ãä äæÚ ÇÓÊÑÇßÊ İíå ÇáÚãáÇÁ ßáåã
+vector <sClient> LoadDataFromFile(string FileName) // ÙÙŠÙƒØªÙˆØ± Ù…Ù† Ù†ÙˆØ¹ Ø§Ø³ØªØ±Ø§ÙƒØª ÙÙŠÙ‡ Ø§Ù„Ø¹Ù…Ù„Ø§Ø¡ ÙƒÙ„Ù‡Ù…
 {
 	vector <sClient> vClients;
 
@@ -157,7 +157,7 @@ vector <sClient> LoadDataFromFile(string FileName) // İíßÊæÑ ãä äæÚ ÇÓÊÑÇßÊ İíå 
 
 		while (getline(MyFile, Line))
 		{
-			Client = ConvertLineToRecord(Line);  // Ïí ÈíÑÌÚáí ÇÓÊÑÇßÔÑ ãáíÇä İ ÇÎÒäå İ İíßÊæÑ ÇáÚãáÇÁ
+			Client = ConvertLineToRecord(Line);  // Ø¯ÙŠ Ø¨ÙŠØ±Ø¬Ø¹Ù„ÙŠ Ø§Ø³ØªØ±Ø§ÙƒØ´Ø± Ù…Ù„ÙŠØ§Ù† Ù Ø§Ø®Ø²Ù†Ù‡ Ù ÙÙŠÙƒØªÙˆØ± Ø§Ù„Ø¹Ù…Ù„Ø§Ø¡
 			vClients.push_back(Client);
 
 		}
@@ -170,7 +170,7 @@ vector <sClient> LoadDataFromFile(string FileName) // İíßÊæÑ ãä äæÚ ÇÓÊÑÇßÊ İíå 
 
 }
 
-void PrintClientRecord(sClient Client) // ÈØÈÚ ÈíÇäÇÊ Úãíá æÇÍÏ İ ÇááíÓÊ æÇäÇ ÈÓÊÏÚíåÇ áßá æÇÍÏ ÈŞÇ
+void PrintClientRecord(sClient Client) // Ø¨Ø·Ø¨Ø¹ Ø¨ÙŠØ§Ù†Ø§Øª Ø¹Ù…ÙŠÙ„ ÙˆØ§Ø­Ø¯ Ù Ø§Ù„Ù„ÙŠØ³Øª ÙˆØ§Ù†Ø§ Ø¨Ø³ØªØ¯Ø¹ÙŠÙ‡Ø§ Ù„ÙƒÙ„ ÙˆØ§Ø­Ø¯ Ø¨Ù‚Ø§
 {
 	cout << "| " << setw(15) << left << Client.AccountNumber;
 	cout << "| " << setw(10) << left << Client.Pincode;
@@ -183,12 +183,12 @@ void PrintClientRecord(sClient Client) // ÈØÈÚ ÈíÇäÇÊ Úãíá æÇÍÏ İ ÇááíÓÊ æÇäÇ ÈÓ
 
 void PrintAllClientsData(vector <sClient>& vClients) // Client List
 {
-	// (ÇáÚäæÇä (ÈÏÇíÉ ÇááíÓÊ
+	// (Ø§Ù„Ø¹Ù†ÙˆØ§Ù† (Ø¨Ø¯Ø§ÙŠØ© Ø§Ù„Ù„ÙŠØ³Øª
 	cout << "\n\t\t\t\t Client List (" << vClients.size() << ") Client(s).";
 	cout << "\n\n--------------------------------------------------------------------------------";
 	cout << "--------------------------\n\n";
 
-	// ÊŞÓíã ÌÏæá ÇááíÓÊ
+	// ØªÙ‚Ø³ÙŠÙ… Ø¬Ø¯ÙˆÙ„ Ø§Ù„Ù„ÙŠØ³Øª
 
 	cout << "| " << setw(15) << left << "Account Number";
 	cout << "| " << setw(10) << left << "Pin Code";
@@ -200,7 +200,7 @@ void PrintAllClientsData(vector <sClient>& vClients) // Client List
 	cout << "--------------------------\n";
 
 
-	// ÈíÇäÇÊ ÇáÚãáÇÁ ÈŞÇ
+	// Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø¹Ù…Ù„Ø§Ø¡ Ø¨Ù‚Ø§
 
 	for (sClient C : vClients)
 	{
@@ -212,7 +212,7 @@ void PrintAllClientsData(vector <sClient>& vClients) // Client List
 
 }
 
-string ReadAccountNumber() // ÈÍŞ æÍŞíŞí ÈÌÏ reusability ÏÇ Çá 
+string ReadAccountNumber() // Ø¨Ø­Ù‚ ÙˆØ­Ù‚ÙŠÙ‚ÙŠ Ø¨Ø¬Ø¯ reusability Ø¯Ø§ Ø§Ù„ 
 {
 	string AccountNumber;
 	cout << "Please enter Account Number ?  ";
@@ -221,13 +221,13 @@ string ReadAccountNumber() // ÈÍŞ æÍŞíŞí ÈÌÏ reusability ÏÇ Çá
 
 }
 
-bool FindClientByAccountNumber(string AccountNumber, vector<sClient>& vClients, sClient& Client) // ÇÔæİ ÑŞã ÇáÍÓÇÈ ãæÌæÏ ÚäÏäÇ æáÇ áÇ
+bool FindClientByAccountNumber(string AccountNumber, vector<sClient>& vClients, sClient& Client) // Ø§Ø´ÙˆÙ Ø±Ù‚Ù… Ø§Ù„Ø­Ø³Ø§Ø¨ Ù…ÙˆØ¬ÙˆØ¯ Ø¹Ù†Ø¯Ù†Ø§ ÙˆÙ„Ø§ Ù„Ø§
 {
 	for (sClient& C : vClients)
 	{
 		if (C.AccountNumber == AccountNumber)
 		{
-			Client = C;  // áæ ãæÌæÏ ÈÇÎÏ ÈíÇäÇÊå
+			Client = C;  // Ù„Ùˆ Ù…ÙˆØ¬ÙˆØ¯ Ø¨Ø§Ø®Ø¯ Ø¨ÙŠØ§Ù†Ø§ØªÙ‡
 			return true;
 		}
 
@@ -236,11 +236,11 @@ bool FindClientByAccountNumber(string AccountNumber, vector<sClient>& vClients, 
 
 }
 
-sClient NewClientData(string AccountNumber) // ÈÇÎÏ ÈíÇäÇÊ ÇáÚãíá ÇáÌÏíÏ
+sClient NewClientData(string AccountNumber) // Ø¨Ø§Ø®Ø¯ Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø¹Ù…ÙŠÙ„ Ø§Ù„Ø¬Ø¯ÙŠØ¯
 {
 	sClient	NewClient;
 
-	NewClient.AccountNumber = AccountNumber; // ÑŞã ÇáÍÓÇÈ ãÔ ÈÛíÑå , ÈÛíÑ ÈíÇäÇÊ ÇáÚãíá ÈÓ
+	NewClient.AccountNumber = AccountNumber; // Ø±Ù‚Ù… Ø§Ù„Ø­Ø³Ø§Ø¨ Ù…Ø´ Ø¨ØºÙŠØ±Ù‡ , Ø¨ØºÙŠØ± Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø¹Ù…ÙŠÙ„ Ø¨Ø³
 
 	cout << "\nEnter Pin Code ? ";
 	getline(cin >> ws, NewClient.Pincode);
@@ -260,7 +260,7 @@ sClient NewClientData(string AccountNumber) // ÈÇÎÏ ÈíÇäÇÊ ÇáÚãíá ÇáÌÏíÏ
 
 }
 
-void SaveClientsToFile(string FileName, vector <sClient>& vClients) // ÈÍİÙ ÇáÊÛíÑÇÊ Çááí ÚãáÊåÇ İ ÇáİÇíá , ÖíİÊ Úãíá ÌÏíÏ
+void SaveClientsToFile(string FileName, vector <sClient>& vClients) // Ø¨Ø­ÙØ¸ Ø§Ù„ØªØºÙŠØ±Ø§Øª Ø§Ù„Ù„ÙŠ Ø¹Ù…Ù„ØªÙ‡Ø§ Ù Ø§Ù„ÙØ§ÙŠÙ„ , Ø¶ÙŠÙØª Ø¹Ù…ÙŠÙ„ Ø¬Ø¯ÙŠØ¯
 {
 	fstream MyFile;
 	MyFile.open(FileName, ios::out);
@@ -269,8 +269,8 @@ void SaveClientsToFile(string FileName, vector <sClient>& vClients) // ÈÍİÙ ÇáÊÛ
 	{
 		for (sClient& C : vClients)
 		{
-			//  åÊßæä È İæáÓ æ áæ ÚÏáÊ Úáí Úãíá İ äİÓ ÇáßáÇãMake for delete Çá  by default ÇáÎØæå Ïí ÚÕİæÑíä ÈÍÌÑ , áæ ÇáÇÖÇİå Úãíá ÌÏíÏ İ ÇæÑíÏí   
-			//ÈÊÑæ İ ã åíÊÍØ İ ÇáİÇíá Make for delete ÊÇäí ÍÇÌå İ ÌÒÁ ãÓÍ Úãíá åÊßæä 
+			//  Ù‡ØªÙƒÙˆÙ† Ø¨ ÙÙˆÙ„Ø³ Ùˆ Ù„Ùˆ Ø¹Ø¯Ù„Øª Ø¹Ù„ÙŠ Ø¹Ù…ÙŠÙ„ Ù Ù†ÙØ³ Ø§Ù„ÙƒÙ„Ø§Ù…Make for delete Ø§Ù„  by default Ø§Ù„Ø®Ø·ÙˆÙ‡ Ø¯ÙŠ Ø¹ØµÙÙˆØ±ÙŠÙ† Ø¨Ø­Ø¬Ø± , Ù„Ùˆ Ø§Ù„Ø§Ø¶Ø§ÙÙ‡ Ø¹Ù…ÙŠÙ„ Ø¬Ø¯ÙŠØ¯ Ù Ø§ÙˆØ±ÙŠØ¯ÙŠ   
+			//Ø¨ØªØ±Ùˆ Ù Ù… Ù‡ÙŠØªØ­Ø· Ù Ø§Ù„ÙØ§ÙŠÙ„ Make for delete ØªØ§Ù†ÙŠ Ø­Ø§Ø¬Ù‡ Ù Ø¬Ø²Ø¡ Ù…Ø³Ø­ Ø¹Ù…ÙŠÙ„ Ù‡ØªÙƒÙˆÙ† 
 
 			if (C.MarkForDelete == false)
 			{
@@ -288,19 +288,19 @@ void SaveClientsToFile(string FileName, vector <sClient>& vClients) // ÈÍİÙ ÇáÊÛ
 
 void AddNewClientScreen(vector <sClient>& vClients)
 {
-	// Çá format 
+	// Ø§Ù„ format 
 
 	ShowHeaderScreen("Add New Client");
 	cout << "Adding New Client : \n\n";
 
 
-	// ÇÎÏ ÇáÇßæäÊ äãÈÑ ÚáÔÇä ÇÊÔíß Úáíå
+	// Ø§Ø®Ø¯ Ø§Ù„Ø§ÙƒÙˆÙ†Øª Ù†Ù…Ø¨Ø± Ø¹Ù„Ø´Ø§Ù† Ø§ØªØ´ÙŠÙƒ Ø¹Ù„ÙŠÙ‡
 
 	sClient Client;
 	string AccountNumber = ReadAccountNumber();
 
-	// ÇÊÔíß ÈŞÇ 
-	// áæ ãæÌæÏ íÏÎá ÑŞã ÊÇäí , áæ ã ãæÌæÏ ÇÎÏ ãäå ÈÇŞí ÇáÈíÇäÇÊ
+	// Ø§ØªØ´ÙŠÙƒ Ø¨Ù‚Ø§ 
+	// Ù„Ùˆ Ù…ÙˆØ¬ÙˆØ¯ ÙŠØ¯Ø®Ù„ Ø±Ù‚Ù… ØªØ§Ù†ÙŠ , Ù„Ùˆ Ù… Ù…ÙˆØ¬ÙˆØ¯ Ø§Ø®Ø¯ Ù…Ù†Ù‡ Ø¨Ø§Ù‚ÙŠ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª
 
 	while (FindClientByAccountNumber(AccountNumber, vClients, Client))
 	{
@@ -309,9 +309,9 @@ void AddNewClientScreen(vector <sClient>& vClients)
 	}
 
 	Client = NewClientData(AccountNumber);
-	vClients.push_back(Client);    // ÇÖíİ ÇáÚãíá ÇáÌÏíÏ ááİíßÊæÑ 
+	vClients.push_back(Client);    // Ø§Ø¶ÙŠÙ Ø§Ù„Ø¹Ù…ÙŠÙ„ Ø§Ù„Ø¬Ø¯ÙŠØ¯ Ù„Ù„ÙÙŠÙƒØªÙˆØ± 
 
-	SaveClientsToFile(FileName, vClients); // ÇÍİÙ ÇáÊÛííÑÇÊ Ïí ÈŞÇ 
+	SaveClientsToFile(FileName, vClients); // Ø§Ø­ÙØ¸ Ø§Ù„ØªØºÙŠÙŠØ±Ø§Øª Ø¯ÙŠ Ø¨Ù‚Ø§ 
 
 	char Answer;
 	cout << "\nDo you want to add another client? (Y/N): ";
@@ -320,7 +320,7 @@ void AddNewClientScreen(vector <sClient>& vClients)
 	if (Answer == 'Y' || Answer == 'y')
 	{
 		system("cls");
-		AddNewClientScreen(vClients); // áæ ÚÇæÒ íÖíİ Úãíá ÊÇäí
+		AddNewClientScreen(vClients); // Ù„Ùˆ Ø¹Ø§ÙˆØ² ÙŠØ¶ÙŠÙ Ø¹Ù…ÙŠÙ„ ØªØ§Ù†ÙŠ
 	}
 
 
@@ -340,7 +340,7 @@ void PrintClientCard(sClient Client)
 
 }
 
-bool MarkClientForDeleteByAccountNumber(string AccountNumber, vector <sClient>& vClients) // ÈÊÇÚÊå È ÊÑæMake for delete ÇáÚãíá Çááí ÚÇæÒå ÇãÓÍå ÇÎáí Çá 
+bool MarkClientForDeleteByAccountNumber(string AccountNumber, vector <sClient>& vClients) // Ø¨ØªØ§Ø¹ØªÙ‡ Ø¨ ØªØ±ÙˆMake for delete Ø§Ù„Ø¹Ù…ÙŠÙ„ Ø§Ù„Ù„ÙŠ Ø¹Ø§ÙˆØ²Ù‡ Ø§Ù…Ø³Ø­Ù‡ Ø§Ø®Ù„ÙŠ Ø§Ù„ 
 {
 
 	for (sClient& C : vClients)
@@ -362,21 +362,21 @@ void DeleteClientScreen(vector<sClient>& vClients)
 	ShowHeaderScreen("Delete Client Screen");
 	char Answer = 'n';
 	sClient Client;
-	string AccountNumber = ReadAccountNumber(); // åÇÎÏ ÇáÇßæäÊ äãÈÑ
+	string AccountNumber = ReadAccountNumber(); // Ù‡Ø§Ø®Ø¯ Ø§Ù„Ø§ÙƒÙˆÙ†Øª Ù†Ù…Ø¨Ø±
 
 	if (FindClientByAccountNumber(AccountNumber, vClients, Client))
 	{
-		PrintClientCard(Client); // ÇØÈÚ ÈíÇäÇÊ ÇáÚãíá Ïå ŞÈá ãÇ ÇãÓÍå
+		PrintClientCard(Client); // Ø§Ø·Ø¨Ø¹ Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø¹Ù…ÙŠÙ„ Ø¯Ù‡ Ù‚Ø¨Ù„ Ù…Ø§ Ø§Ù…Ø³Ø­Ù‡
 
-		cout << "\n\nAre you sure you want to delete this client ? y/n ?  "; // ÇáÊÇßíÏ Úáí ÎØæÉ ÇáãÓÍ
+		cout << "\n\nAre you sure you want to delete this client ? y/n ?  "; // Ø§Ù„ØªØ§ÙƒÙŠØ¯ Ø¹Ù„ÙŠ Ø®Ø·ÙˆØ© Ø§Ù„Ù…Ø³Ø­
 		cin >> Answer;
 
 
-		if (Answer == 'Y' || Answer == 'y')   // áæ ãÊÃßÏ Çäå åíÓãÍ
+		if (Answer == 'Y' || Answer == 'y')   // Ù„Ùˆ Ù…ØªØ£ÙƒØ¯ Ø§Ù†Ù‡ Ù‡ÙŠØ³Ù…Ø­
 		{
-			MarkClientForDeleteByAccountNumber(AccountNumber, vClients); // ÈÊÇÚÊå È ÊÑæMake for delete ÇÎáí Çá 
-			SaveClientsToFile(FileName, vClients);                       // ÇãÓÍå ãä ÇáİÇíá
-			vClients = LoadDataFromFile(FileName);                       // ÇÚÏá Úáí ÇáİíßÊæÑ , ÇãÓÍå ãäå ÈÑÏæ
+			MarkClientForDeleteByAccountNumber(AccountNumber, vClients); // Ø¨ØªØ§Ø¹ØªÙ‡ Ø¨ ØªØ±ÙˆMake for delete Ø§Ø®Ù„ÙŠ Ø§Ù„ 
+			SaveClientsToFile(FileName, vClients);                       // Ø§Ù…Ø³Ø­Ù‡ Ù…Ù† Ø§Ù„ÙØ§ÙŠÙ„
+			vClients = LoadDataFromFile(FileName);                       // Ø§Ø¹Ø¯Ù„ Ø¹Ù„ÙŠ Ø§Ù„ÙÙŠÙƒØªÙˆØ± , Ø§Ù…Ø³Ø­Ù‡ Ù…Ù†Ù‡ Ø¨Ø±Ø¯Ùˆ
 			cout << "\n\nClient Deleted Successfully.\n";
 
 
@@ -386,12 +386,12 @@ void DeleteClientScreen(vector<sClient>& vClients)
 	}
 	else
 	{
-		cout << "\nClient with Account Number (" << AccountNumber << ") is Not Found!\n"; // áæ ÇáÇßæäÊ äãÈÑ ã ãæÌæÏ
+		cout << "\nClient with Account Number (" << AccountNumber << ") is Not Found!\n"; // Ù„Ùˆ Ø§Ù„Ø§ÙƒÙˆÙ†Øª Ù†Ù…Ø¨Ø± Ù… Ù…ÙˆØ¬ÙˆØ¯
 	}
 
 }
 
-void UpdateClientDataScreen(vector<sClient>& vClients)  // ÇÚÏá Úáí ÈíÇäÇÊ Úãíá ãæÌæÏ ÈÇáİÚá
+void UpdateClientDataScreen(vector<sClient>& vClients)  // Ø§Ø¹Ø¯Ù„ Ø¹Ù„ÙŠ Ø¨ÙŠØ§Ù†Ø§Øª Ø¹Ù…ÙŠÙ„ Ù…ÙˆØ¬ÙˆØ¯ Ø¨Ø§Ù„ÙØ¹Ù„
 {
 	ShowHeaderScreen("Update Client Info Screen");
 
@@ -399,26 +399,26 @@ void UpdateClientDataScreen(vector<sClient>& vClients)  // ÇÚÏá Úáí ÈíÇäÇÊ Úãíá 
 	sClient Client;
 	string AccountNumber = ReadAccountNumber();
 
-	if (FindClientByAccountNumber(AccountNumber, vClients, Client)) // ÇÊÔíß áæ ãæÌæÏ ãä ÎáÇá ÇáÇßæäÊ äãÈÑ
+	if (FindClientByAccountNumber(AccountNumber, vClients, Client)) // Ø§ØªØ´ÙŠÙƒ Ù„Ùˆ Ù…ÙˆØ¬ÙˆØ¯ Ù…Ù† Ø®Ù„Ø§Ù„ Ø§Ù„Ø§ÙƒÙˆÙ†Øª Ù†Ù…Ø¨Ø±
 	{
-		PrintClientCard(Client);      // ÇØÈÚ ÈíÇäÇÊå
+		PrintClientCard(Client);      // Ø§Ø·Ø¨Ø¹ Ø¨ÙŠØ§Ù†Ø§ØªÙ‡
 
-		cout << "\n\nAre you sure you want to update client ? y/n ? ";  // ÇáÊÇßíÏ Úáí ÇáÊÚÏíá
+		cout << "\n\nAre you sure you want to update client ? y/n ? ";  // Ø§Ù„ØªØ§ÙƒÙŠØ¯ Ø¹Ù„ÙŠ Ø§Ù„ØªØ¹Ø¯ÙŠÙ„
 		cin >> Answer;
 
-		if (Answer == 'Y' || Answer == 'y')  // áæ ãÊÇßÏ Çäå åíÚÏá 
+		if (Answer == 'Y' || Answer == 'y')  // Ù„Ùˆ Ù…ØªØ§ÙƒØ¯ Ø§Ù†Ù‡ Ù‡ÙŠØ¹Ø¯Ù„ 
 		{
-			for (sClient& C : vClients) // ÇäÇ ÚÏáÊ åäÇ Úáí ÇáİíßÊæÑ áÇä ÚÇãáå ÈÇí Ñíİ
+			for (sClient& C : vClients) // Ø§Ù†Ø§ Ø¹Ø¯Ù„Øª Ù‡Ù†Ø§ Ø¹Ù„ÙŠ Ø§Ù„ÙÙŠÙƒØªÙˆØ± Ù„Ø§Ù† Ø¹Ø§Ù…Ù„Ù‡ Ø¨Ø§ÙŠ Ø±ÙŠÙ
 			{
 				if (C.AccountNumber == AccountNumber)
 				{
-					C = NewClientData(AccountNumber); // ÇÎÏ ÇáÈíÇäÇÊ ÇáÌÏíÏå æ ÚÏáÊåÇ
+					C = NewClientData(AccountNumber); // Ø§Ø®Ø¯ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø¬Ø¯ÙŠØ¯Ù‡ Ùˆ Ø¹Ø¯Ù„ØªÙ‡Ø§
 					break;
 				}
 
 			}
 
-			SaveClientsToFile(FileName, vClients); // ÇÚÏá ÇáİÇíá 
+			SaveClientsToFile(FileName, vClients); // Ø§Ø¹Ø¯Ù„ Ø§Ù„ÙØ§ÙŠÙ„ 
 
 
 			cout << "\n\nClient Updated Successfully\n";
@@ -438,16 +438,16 @@ void FindClientScreen(vector<sClient>& vClients)
 	ShowHeaderScreen("Find Client Screen");
 
 	sClient Client;
-	string AccountNumber = ReadAccountNumber(); // ÇÎÏ ÇáÇßæäÊ äãÈÑ
+	string AccountNumber = ReadAccountNumber(); // Ø§Ø®Ø¯ Ø§Ù„Ø§ÙƒÙˆÙ†Øª Ù†Ù…Ø¨Ø±
 
-	if (FindClientByAccountNumber(AccountNumber, vClients, Client))  // ÇÊÔíß 
+	if (FindClientByAccountNumber(AccountNumber, vClients, Client))  // Ø§ØªØ´ÙŠÙƒ 
 	{
-		PrintClientCard(Client);      // ÇØÈÚå áæ ãæÌæÏ 
+		PrintClientCard(Client);      // Ø§Ø·Ø¨Ø¹Ù‡ Ù„Ùˆ Ù…ÙˆØ¬ÙˆØ¯ 
 
 	}
 	else
 	{
-		cout << "\nClient with Account Number (" << AccountNumber << ") is Not Found!\n"; // áæ ãÔ ãæÌæÏ 
+		cout << "\nClient with Account Number (" << AccountNumber << ") is Not Found!\n"; // Ù„Ùˆ Ù…Ø´ Ù…ÙˆØ¬ÙˆØ¯ 
 	}
 
 
@@ -458,18 +458,18 @@ bool DepositBalanceToClientByAccountNumber(string AccountNumber, double Amount, 
 {
 	char Answer = 'n';
 
-	cout << "\n\nAre you sure you want perform this Transaction ?  Y/N? "; // ÃßÏ ÇáÇæá Úáí Úãáíå (ÇáÇíÏÇÚ/ ÇáÓÍÈ) ŞÈá ãÇ ÇÚãáåÇ
+	cout << "\n\nAre you sure you want perform this Transaction ?  Y/N? "; // Ø£ÙƒØ¯ Ø§Ù„Ø§ÙˆÙ„ Ø¹Ù„ÙŠ Ø¹Ù…Ù„ÙŠÙ‡ (Ø§Ù„Ø§ÙŠØ¯Ø§Ø¹/ Ø§Ù„Ø³Ø­Ø¨) Ù‚Ø¨Ù„ Ù…Ø§ Ø§Ø¹Ù…Ù„Ù‡Ø§
 	cin >> Answer;
 
 	if (Answer == 'Y' || Answer == 'y')
 	{
-		for (sClient& C : vClients)       // ÈÇí Ñíİ ÚáÔÇä ÇÚÏá Úáí ÇáÇÕá ã äÓÎå ãäå 
+		for (sClient& C : vClients)       // Ø¨Ø§ÙŠ Ø±ÙŠÙ Ø¹Ù„Ø´Ø§Ù† Ø§Ø¹Ø¯Ù„ Ø¹Ù„ÙŠ Ø§Ù„Ø§ØµÙ„ Ù… Ù†Ø³Ø®Ù‡ Ù…Ù†Ù‡ 
 		{
 			if (C.AccountNumber == AccountNumber)
 			{
-				C.AccountBalance += Amount;                 //  ÇÒæÏ/ÇŞáá) Şíãå ÇáÈÇáäÓ áÕÇÍÈ ÇáÇßæäÊ äãÈÑ Ïå) , ÇÔÇÑå ÇáÇãæäÊ åÊİÑŞ åäÇ áæ ÓÍÈ åÈÚÊåÇ ÈÇáÓÇáÈ
-				SaveClientsToFile(FileName, vClients);      // ÇÍİÙ ÇáÊÛííÑÇÊ Úáí ÇáİÇíá
-				cout << "\n\nDone Successfully.\nNew Balance is : " << C.AccountBalance << endl;  // ÇØÈÚ ÇáÈÇáäÓ ÈÚÏ ÇáÊÚÏíá ÈŞÇ
+				C.AccountBalance += Amount;                 //  Ø§Ø²ÙˆØ¯/Ø§Ù‚Ù„Ù„) Ù‚ÙŠÙ…Ù‡ Ø§Ù„Ø¨Ø§Ù„Ù†Ø³ Ù„ØµØ§Ø­Ø¨ Ø§Ù„Ø§ÙƒÙˆÙ†Øª Ù†Ù…Ø¨Ø± Ø¯Ù‡) , Ø§Ø´Ø§Ø±Ù‡ Ø§Ù„Ø§Ù…ÙˆÙ†Øª Ù‡ØªÙØ±Ù‚ Ù‡Ù†Ø§ Ù„Ùˆ Ø³Ø­Ø¨ Ù‡Ø¨Ø¹ØªÙ‡Ø§ Ø¨Ø§Ù„Ø³Ø§Ù„Ø¨
+				SaveClientsToFile(FileName, vClients);      // Ø§Ø­ÙØ¸ Ø§Ù„ØªØºÙŠÙŠØ±Ø§Øª Ø¹Ù„ÙŠ Ø§Ù„ÙØ§ÙŠÙ„
+				cout << "\n\nDone Successfully.\nNew Balance is : " << C.AccountBalance << endl;  // Ø§Ø·Ø¨Ø¹ Ø§Ù„Ø¨Ø§Ù„Ù†Ø³ Ø¨Ø¹Ø¯ Ø§Ù„ØªØ¹Ø¯ÙŠÙ„ Ø¨Ù‚Ø§
 				return true;
 			}
 		}
@@ -480,33 +480,33 @@ bool DepositBalanceToClientByAccountNumber(string AccountNumber, double Amount, 
 
 void DepositScreen(vector <sClient> &vClients)
 {
-	// ÈÊÇÚ ÈÏÇíÉ ÇáÔÇÔå format Çá
+	// Ø¨ØªØ§Ø¹ Ø¨Ø¯Ø§ÙŠØ© Ø§Ù„Ø´Ø§Ø´Ù‡ format Ø§Ù„
 	ShowHeaderScreen("Deposit Screen");  
 
 
-	// ÇáİÇÑÇíÈáÒ Çááí åÍÊÇÌåã
+	// Ø§Ù„ÙØ§Ø±Ø§ÙŠØ¨Ù„Ø² Ø§Ù„Ù„ÙŠ Ù‡Ø­ØªØ§Ø¬Ù‡Ù…
 	sClient Client;
 	double Amount = 0;
 	string AccountNumber = ReadAccountNumber();
 
 
-	//deposit ÇÊÔíß ÇáÇæá ÇáÇßæäÊ äãÈÑ ÚäÏí æáÇ áÇ ŞÈá ãÇ ÇÚãá Úãáíå 
+	//deposit Ø§ØªØ´ÙŠÙƒ Ø§Ù„Ø§ÙˆÙ„ Ø§Ù„Ø§ÙƒÙˆÙ†Øª Ù†Ù…Ø¨Ø± Ø¹Ù†Ø¯ÙŠ ÙˆÙ„Ø§ Ù„Ø§ Ù‚Ø¨Ù„ Ù…Ø§ Ø§Ø¹Ù…Ù„ Ø¹Ù…Ù„ÙŠÙ‡ 
 
-	while (!FindClientByAccountNumber(AccountNumber, vClients, Client)) // åİÖá ÇŞÑÇ áÍÏ ãÇ íÏÎá ÇßæäÊ äãÈÑ ÚäÏí 
+	while (!FindClientByAccountNumber(AccountNumber, vClients, Client)) // Ù‡ÙØ¶Ù„ Ø§Ù‚Ø±Ø§ Ù„Ø­Ø¯ Ù…Ø§ ÙŠØ¯Ø®Ù„ Ø§ÙƒÙˆÙ†Øª Ù†Ù…Ø¨Ø± Ø¹Ù†Ø¯ÙŠ 
 	{
 		cout << "Client with [" << AccountNumber << "] Does Not Exist! , Enter another Account Number :  ";
 		cin >> AccountNumber;
 
 	}
 
-	// íÈŞí ÇáÇßæäÊ ÚäÏí while scope  ÈÏá ÎÑÌ ãä 
-	// ÇØÈÚ ÈŞÇ ÏÇÊÇ ÇáßáÇíäÊ ÕÇÍÈ ÇáÇßæäÊ äãÈÑ Ïå æ ÇÎÏ ŞíãÉ ÇáÇíÏÇÚ
+	// ÙŠØ¨Ù‚ÙŠ Ø§Ù„Ø§ÙƒÙˆÙ†Øª Ø¹Ù†Ø¯ÙŠ while scope  Ø¨Ø¯Ù„ Ø®Ø±Ø¬ Ù…Ù† 
+	// Ø§Ø·Ø¨Ø¹ Ø¨Ù‚Ø§ Ø¯Ø§ØªØ§ Ø§Ù„ÙƒÙ„Ø§ÙŠÙ†Øª ØµØ§Ø­Ø¨ Ø§Ù„Ø§ÙƒÙˆÙ†Øª Ù†Ù…Ø¨Ø± Ø¯Ù‡ Ùˆ Ø§Ø®Ø¯ Ù‚ÙŠÙ…Ø© Ø§Ù„Ø§ÙŠØ¯Ø§Ø¹
 
 	PrintClientCard(Client);
 	Amount = ReadNum("Please enter deposit number ? ");
 
 
-	DepositBalanceToClientByAccountNumber(AccountNumber, Amount, vClients); // ÊäİíĞ ÚãáíÉ ÇáÇíÏÇÚ
+	DepositBalanceToClientByAccountNumber(AccountNumber, Amount, vClients); // ØªÙ†ÙÙŠØ° Ø¹Ù…Ù„ÙŠØ© Ø§Ù„Ø§ÙŠØ¯Ø§Ø¹
 
 	
 
@@ -514,11 +514,11 @@ void DepositScreen(vector <sClient> &vClients)
 
 
 
-double ReadWithdraw(string AccountNumber, sClient& Client) // İÇäßÔä áæÍÏå ÚáÔÇä åÚãá ÇÊÔíß Úáíå
+double ReadWithdraw(string AccountNumber, sClient& Client) // ÙØ§Ù†ÙƒØ´Ù† Ù„ÙˆØ­Ø¯Ù‡ Ø¹Ù„Ø´Ø§Ù† Ù‡Ø¹Ù…Ù„ Ø§ØªØ´ÙŠÙƒ Ø¹Ù„ÙŠÙ‡
 {
 	int Withdraw = ReadNum("Please enter withdraw amount ? ");
 
-	while (Withdraw >= Client.AccountBalance)     // ãŞÏÇÑ ÇáÓÍÈ áÇÒã íßæä ÇŞá ãä ÇáãÈáÛ 
+	while (Withdraw >= Client.AccountBalance)     // Ù…Ù‚Ø¯Ø§Ø± Ø§Ù„Ø³Ø­Ø¨ Ù„Ø§Ø²Ù… ÙŠÙƒÙˆÙ† Ø§Ù‚Ù„ Ù…Ù† Ø§Ù„Ù…Ø¨Ù„Øº 
 	{
 		cout << "\nAmount Exceeds the balance, you can withdraw up to : " << Client.AccountBalance << "\n";
 		cout << "Please enter another withdraw amount ? ";
@@ -533,18 +533,18 @@ double ReadWithdraw(string AccountNumber, sClient& Client) // İÇäßÔä áæÍÏå ÚáÔÇä
 
 void WithdrawScreen(vector <sClient> &vClients)
 {
-	// ÈÊÇÚ ÈÏÇíÉ ÇáÔÇÔå format Çá
+	// Ø¨ØªØ§Ø¹ Ø¨Ø¯Ø§ÙŠØ© Ø§Ù„Ø´Ø§Ø´Ù‡ format Ø§Ù„
 	ShowHeaderScreen("Withdraw Screen");
 
 
-	// ÇáİÇÑÇíÈáÒ Çááí åÍÊÇÌåã
+	// Ø§Ù„ÙØ§Ø±Ø§ÙŠØ¨Ù„Ø² Ø§Ù„Ù„ÙŠ Ù‡Ø­ØªØ§Ø¬Ù‡Ù…
 	sClient Client;
 	double Amount = 0;
 	string AccountNumber = ReadAccountNumber();
 
 
 
-	// withdraw ÇÊÔíß ÇáÇæá ÇáÇßæäÊ äãÈÑ ÚäÏí æáÇ áÇ ŞÈá ãÇ ÇÚãá Úãáíå 
+	// withdraw Ø§ØªØ´ÙŠÙƒ Ø§Ù„Ø§ÙˆÙ„ Ø§Ù„Ø§ÙƒÙˆÙ†Øª Ù†Ù…Ø¨Ø± Ø¹Ù†Ø¯ÙŠ ÙˆÙ„Ø§ Ù„Ø§ Ù‚Ø¨Ù„ Ù…Ø§ Ø§Ø¹Ù…Ù„ Ø¹Ù…Ù„ÙŠÙ‡ 
 
 	while (!FindClientByAccountNumber(AccountNumber, vClients, Client))
 	{
@@ -553,20 +553,20 @@ void WithdrawScreen(vector <sClient> &vClients)
 
 	}
 
-	// íÈŞí ÇáÇßæäÊ ÚäÏí while scope  ÈÏá ÎÑÌ ãä 
-	// ÇØÈÚ ÈŞÇ ÏÇÊÇ ÇáßáÇíäÊ ÕÇÍÈ ÇáÇßæäÊ äãÈÑ Ïå ŞÈá Çí ÊÚÏíá æ ÇÎÏ Şíãå ÇáÓÍÈ æ ÇÊÔíß ÚáíåÇ
+	// ÙŠØ¨Ù‚ÙŠ Ø§Ù„Ø§ÙƒÙˆÙ†Øª Ø¹Ù†Ø¯ÙŠ while scope  Ø¨Ø¯Ù„ Ø®Ø±Ø¬ Ù…Ù† 
+	// Ø§Ø·Ø¨Ø¹ Ø¨Ù‚Ø§ Ø¯Ø§ØªØ§ Ø§Ù„ÙƒÙ„Ø§ÙŠÙ†Øª ØµØ§Ø­Ø¨ Ø§Ù„Ø§ÙƒÙˆÙ†Øª Ù†Ù…Ø¨Ø± Ø¯Ù‡ Ù‚Ø¨Ù„ Ø§ÙŠ ØªØ¹Ø¯ÙŠÙ„ Ùˆ Ø§Ø®Ø¯ Ù‚ÙŠÙ…Ù‡ Ø§Ù„Ø³Ø­Ø¨ Ùˆ Ø§ØªØ´ÙŠÙƒ Ø¹Ù„ÙŠÙ‡Ø§
 	
 	PrintClientCard(Client);
 	Amount = ReadWithdraw(AccountNumber, Client);
 
-	DepositBalanceToClientByAccountNumber(AccountNumber, Amount * -1, vClients); // äİÓ áæÌíß ÇáÇíÏÇÚ áßä ÈÚßÓ ÇáÇÔÇÑå
+	DepositBalanceToClientByAccountNumber(AccountNumber, Amount * -1, vClients); // Ù†ÙØ³ Ù„ÙˆØ¬ÙŠÙƒ Ø§Ù„Ø§ÙŠØ¯Ø§Ø¹ Ù„ÙƒÙ† Ø¨Ø¹ÙƒØ³ Ø§Ù„Ø§Ø´Ø§Ø±Ù‡
 	
 
 }
 
 
 
-void PrintClientRecordBalanceLine(sClient& Client) // ØÈÇÚÉ ÈíÇäÇÊ ÇáÚãáÇÁ İ ÇáÈÇáäÓ áíÓÊ
+void PrintClientRecordBalanceLine(sClient& Client) // Ø·Ø¨Ø§Ø¹Ø© Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø¹Ù…Ù„Ø§Ø¡ Ù Ø§Ù„Ø¨Ø§Ù„Ù†Ø³ Ù„ÙŠØ³Øª
 {
 	cout << "| " << setw(15) << left << Client.AccountNumber;
 	cout << "| " << setw(40) << left << Client.Name;
@@ -575,12 +575,12 @@ void PrintClientRecordBalanceLine(sClient& Client) // ØÈÇÚÉ ÈíÇäÇÊ ÇáÚãáÇÁ İ ÇáÈ
 
 void PrintTotalBalance(vector <sClient> vClients)
 {
-	// (ÇáÚäæÇä (ÈÏÇíÉ ÇááíÓÊ
+	// (Ø§Ù„Ø¹Ù†ÙˆØ§Ù† (Ø¨Ø¯Ø§ÙŠØ© Ø§Ù„Ù„ÙŠØ³Øª
 	cout << "\n\t\t\t\t Balances List (" << vClients.size() << ") Client(s).";
 	cout << "\n\n--------------------------------------------------------------------------------";
 	cout << "--------------------------\n\n";
 
-	// ÊŞÓíã ÌÏæá ÇááíÓÊ
+	// ØªÙ‚Ø³ÙŠÙ… Ø¬Ø¯ÙˆÙ„ Ø§Ù„Ù„ÙŠØ³Øª
 
 	cout << "| " << setw(15) << left << "Account Number";
 	cout << "| " << setw(40) << left << "Name";
@@ -594,12 +594,12 @@ void PrintTotalBalance(vector <sClient> vClients)
 
 	for (sClient& C : vClients)
 	{
-		PrintClientRecordBalanceLine(C);   //( ØÈÚ ÈíÇäÇÊ ßá Úãíá ( ÇáÇßæäÊ äãÈÑ / ÇáÇÓã / ÇáÑÕíÏ 
-		TotalBalance += C.AccountBalance;   // ÇÍÓÈ ÇáÊæÊÇá ÈÇáäÓ áßá ÇáÚãáÇÁ
+		PrintClientRecordBalanceLine(C);   //( Ø·Ø¨Ø¹ Ø¨ÙŠØ§Ù†Ø§Øª ÙƒÙ„ Ø¹Ù…ÙŠÙ„ ( Ø§Ù„Ø§ÙƒÙˆÙ†Øª Ù†Ù…Ø¨Ø± / Ø§Ù„Ø§Ø³Ù… / Ø§Ù„Ø±ØµÙŠØ¯ 
+		TotalBalance += C.AccountBalance;   // Ø§Ø­Ø³Ø¨ Ø§Ù„ØªÙˆØªØ§Ù„ Ø¨Ø§Ù„Ù†Ø³ Ù„ÙƒÙ„ Ø§Ù„Ø¹Ù…Ù„Ø§Ø¡
 
 	}
 
-	cout << "\t\t\t\t\t" << "TotalBalance = " << TotalBalance;  // ÇØÈÚå 
+	cout << "\t\t\t\t\t" << "TotalBalance = " << TotalBalance;  // Ø§Ø·Ø¨Ø¹Ù‡ 
 
 
 
@@ -755,7 +755,7 @@ void ShowMainMenu()
 	cout << "                   [6] Transaction.\n";
 	cout << "                   [7] Exit.\n";
 	cout << "===============================================================\n";
-	PerformMainMenuOption(enMainMenuOptions(ReadMainMenuOption())); // ÇÎÏ ÑŞã ÇáÚãáíå æ ÇäİĞåÇ
+	PerformMainMenuOption(enMainMenuOptions(ReadMainMenuOption())); // Ø§Ø®Ø¯ Ø±Ù‚Ù… Ø§Ù„Ø¹Ù…Ù„ÙŠÙ‡ Ùˆ Ø§Ù†ÙØ°Ù‡Ø§
 
 	
 
